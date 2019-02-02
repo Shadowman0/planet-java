@@ -1,4 +1,4 @@
-package socket.rocket;
+package socket.rocket.view;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -8,10 +8,9 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 
-import socket.rocket.model.Rocket;
+import socket.rocket.RocketApp;
 import socket.rocket.model.Vector;
-import socket.rocket.view.BodiesDto;
-import socket.rocket.view.VectorDto;
+import socket.rocket.model.bodies.Planet;
 
 @Controller
 public class AppSocketController {
@@ -25,11 +24,11 @@ public class AppSocketController {
 
 	@SendTo("/topic/bodies")
 	public BodiesDto bodies() {
-		List<Rocket> bodies = rocketApp.getBodies();
+		List<Planet> bodies = rocketApp.getBodies();
 		return new BodiesDto(map(bodies));
 	}
 
-	private List<VectorDto> map(List<Rocket> bodies) {
+	private List<VectorDto> map(List<Planet> bodies) {
 		return bodies.stream().map(rocket -> map(rocket.getPosition())).collect(Collectors.toList());
 	}
 

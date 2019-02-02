@@ -1,7 +1,9 @@
-package socket.rocket.model;
+package socket.rocket.model.bodies;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import socket.rocket.model.Vector;
 
 public class RocketSmall extends Rocket {
 	private RocketEngine engine;
@@ -28,7 +30,7 @@ public class RocketSmall extends Rocket {
 				defaultVelocity);
 		init(engine, tank, cargo);
 
-		List<SimpleBody> realRocketParts = new ArrayList();
+		List<SimpleBody> realRocketParts = new ArrayList<SimpleBody>();
 		realRocketParts.add(engine);
 		realRocketParts.add(tank);
 		realRocketParts.add(cargo);

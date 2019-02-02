@@ -1,4 +1,7 @@
-package socket.rocket.model;
+package socket.rocket.model.bodies;
+
+import socket.rocket.model.AbstractBody;
+import socket.rocket.model.Vector;
 
 public class RocketFuelTank extends SimpleBody {
 	private double fuelMass;

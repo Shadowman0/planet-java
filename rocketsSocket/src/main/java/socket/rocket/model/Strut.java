@@ -1,5 +1,7 @@
 package socket.rocket.model;
 
+import socket.rocket.model.bodies.SimpleBody;
+
 public class Strut {
 
 	private SimpleBody firstBody;

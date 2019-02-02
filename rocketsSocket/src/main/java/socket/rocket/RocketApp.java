@@ -7,8 +7,9 @@ import javax.swing.Timer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import socket.rocket.model.Rocket;
 import socket.rocket.model.Simulation;
+import socket.rocket.model.bodies.Planet;
+import socket.rocket.view.AppSocketController;
 
 @Component
 public class RocketApp {
@@ -32,8 +33,8 @@ public class RocketApp {
 		appSocketController.bodies();
 	}
 
-	public List<Rocket> getBodies() {
-		return simulation.bodyList.getRockets();
+	public List<Planet> getBodies() {
+		return simulation.bodyList.getPlanets();
 	}
 
 }

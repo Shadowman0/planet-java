@@ -1,7 +1,11 @@
-package socket.rocket.model;
+package socket.rocket.model.bodies;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import socket.rocket.model.AbstractBody;
+import socket.rocket.model.Strut;
+import socket.rocket.model.Vector;
 
 public abstract class Rocket extends AbstractBody {
 

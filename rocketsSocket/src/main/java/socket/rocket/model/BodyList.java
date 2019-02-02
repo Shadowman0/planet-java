@@ -3,6 +3,11 @@ package socket.rocket.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import socket.rocket.model.bodies.Planet;
+import socket.rocket.model.bodies.Rocket;
+import socket.rocket.model.bodies.RocketSmall;
+import socket.rocket.model.bodies.SimpleBody;
+
 public class BodyList {
 	private List<Planet> planets = new ArrayList<Planet>();;
 	private List<Rocket> rockets = new ArrayList<Rocket>();;
